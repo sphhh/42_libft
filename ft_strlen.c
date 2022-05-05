@@ -6,26 +6,26 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 18:36:45 by vipereir          #+#    #+#             */
-/*   Updated: 2022/03/29 18:36:49 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/04 11:34:29 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+int	ft_strlen(const char *s)
 {
 	int		i;
 
 	i = 0;
-	while (str[i])
+	while (s[i])
 	{
 		i++;
 	}
 	return (i);
 }
 
-// #include <stdio.h>
+/*#include <stdio.h>
 
-// int		main(void)
-// {
-// 	printf("SIZE: %d\n", ft_strlen("asdf"));
-// 	return(0);
-// }
+int		main(void)
+{
+	printf("SIZE: %d\n", ft_strlen("aasdfsdf"));
+	return(0);
+}*/

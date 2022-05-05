@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vipereir <vipereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/04 10:46:00 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/04 10:59:25 by vipereir         ###   ########.fr       */
+/*   Created: 2022/05/04 09:44:26 by vipereir          #+#    #+#             */
+/*   Updated: 2022/05/04 10:22:46 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int c)
+int	ft_isalnum(int c)
 {
-	if (c >= 32 && c <= 126)
+	if ((c >= 'a' && c <= 'z')
+		|| (c >= 'A' && c <= 'Z')
+		|| (c >= '0' && c <= '9'))
 		return (1);
 	return (0);
 }
 
 /*#include <stdio.h>
 #include <ctype.h>
+
 int	main(void)
 {
-	int	n;
+	int n;
 
-	n = '\n';
-	printf("output: %i\n", ft_isprint(n));
-	printf("output: %i\n", isprint(n));
-}*/	
+	n = '5';
+	printf("output: %i\n", ft_isalnum(n));
+	printf("output: %i\n", isalnum(n));
+}*/
