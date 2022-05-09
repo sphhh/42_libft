@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 10:28:38 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/04 10:44:12 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/09 14:31:54 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,4 @@ int	main(void)
 	n = 'd';
 	printf("output: %i\n", ft_isascii(n));
 	printf("output: %i\n", isascii(n));
-}*/
+}afasfsfsfsafasfasfa*/
