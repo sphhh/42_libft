@@ -1,43 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/05 11:08:42 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/06 07:57:51 by vipereir         ###   ########.fr       */
+/*   Created: 2022/05/06 08:19:17 by vipereir          #+#    #+#             */
+/*   Updated: 2022/05/06 14:57:58 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-typedef unsigned int	t_zise;
+#include <stdlib.h>
 
-void	*ft_memset(void	*str, int c, t_zise	n)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	t_zise	i;
-	char	*tchar;
+	unsigned int	i;
+	unsigned int	l;
 
-	tchar = (char *)str;
 	i = 0;
-	while (i < n)
+	l = 0;
+	while (src[l])
+		l++;	
+	while (src[i] && i < size)	
 	{
-		tchar[i] = c;
+		dst[i] = src[i];
 		i++;
 	}
-	return (str);
+	return (l);	
 }
 
-#include <stdio.h>
 #include <string.h>
+#include <stdio.h>
 
 int	main(void)
 {
-	char str[42];
-
-	strcpy(str, "asdfasdfasdfasdfasdf");
-	printf("%s\n",str);
-	ft_memset(str, '$', 10);
-	printf("%s\n",str);	
-	memset(str, '#', 10);
-	printf("%s\n",str);
+	char src[42] = "123456789";
+	char dest[42];
+	int	aa;
+	aa = ft_strlcpy(dest, src, 5);
+	printf("%s\n", dest);
+	printf("%i\n", aa);
 }

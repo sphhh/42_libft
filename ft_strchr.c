@@ -1,43 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/05 11:08:42 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/06 07:57:51 by vipereir         ###   ########.fr       */
+/*   Created: 2022/05/06 08:58:12 by vipereir          #+#    #+#             */
+/*   Updated: 2022/05/06 09:37:09 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-typedef unsigned int	t_zise;
-
-void	*ft_memset(void	*str, int c, t_zise	n)
+char	*ft_strchr(const char *str, int c)
 {
-	t_zise	i;
-	char	*tchar;
+	int	i;
 
-	tchar = (char *)str;
 	i = 0;
-	while (i < n)
+	while (str[i])
 	{
-		tchar[i] = c;
+		if (str[i] == c)
+			return ((char *)&str[i]);
 		i++;
 	}
-	return (str);
+	return (0);
 }
 
+/*
 #include <stdio.h>
 #include <string.h>
 
 int	main(void)
 {
-	char str[42];
+	const char	string[42] = "aaaaaaaaabccccccc";
 
-	strcpy(str, "asdfasdfasdfasdfasdf");
-	printf("%s\n",str);
-	ft_memset(str, '$', 10);
-	printf("%s\n",str);	
-	memset(str, '#', 10);
-	printf("%s\n",str);
+	printf("%s\n", string);
+	printf("%s\n", ft_strchr(string, 'd'));
+
 }
+*/
