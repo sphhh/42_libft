@@ -1,43 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vipereir <vipereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/09 11:40:23 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/09 12:13:26 by vipereir         ###   ########.fr       */
+/*   Created: 2022/05/06 15:00:25 by vipereir          #+#    #+#             */
+/*   Updated: 2022/05/09 09:48:48 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(const char *str)
-{
-	int	i;
-	int	nb;
-	int	signal;
+#include <stdlib.h>
 
-	i = 0;
-	nb = 0;
-	signal = 1;
-	if (str[i++] == '-')
-		signal = -signal;
-	while (str[i] >= '0' && str[i] <= '9' && str[i])
-	{
-		nb =  nb + (str[i] - '0');
-		if	(str[i + 1] >= '0' && str[i + 1] <= '9')
-			nb = nb * 10;
-		i++;
-	}
-	return (nb * signal);
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
+{
 }
-/*
+
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 
 int	main(void)
 {
-	char	*num = "0";
-	printf("%d\n", atoi(num));
-	printf("%d\n", ft_atoi(num));
-	return (0);
-}*/
+	char src[42] = "aaaaaaaaa";
+	char src2[42] = "aaaaaaaaa";
+	char dest[42] = "bbbbb";
+	char dest2[42] = "bbbbb";
+
+	printf("%lu\n", strlcat(dest, src, 4));
+	printf("%s\n", dest);
+
+	printf("%lu\n", ft_strlcat(dest2, src2, 4));
+	printf("%s\n", dest2);
+}
+

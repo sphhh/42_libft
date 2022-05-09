@@ -1,43 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vipereir <vipereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/09 11:40:23 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/09 12:13:26 by vipereir         ###   ########.fr       */
+/*   Created: 2022/05/09 09:49:00 by vipereir          #+#    #+#             */
+/*   Updated: 2022/05/09 11:21:48 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(const char *str)
-{
-	int	i;
-	int	nb;
-	int	signal;
+#include <stdlib.h>
 
+int	ft_memcmp(const void *str1, const void *str2, size_t n)
+{
+	size_t	i;
+	char *temp;
+	char *temp2;
+
+	temp = (char *)str1;
+	temp2 =  (char *)str2;
 	i = 0;
-	nb = 0;
-	signal = 1;
-	if (str[i++] == '-')
-		signal = -signal;
-	while (str[i] >= '0' && str[i] <= '9' && str[i])
+	while (temp[i] && i < n)
 	{
-		nb =  nb + (str[i] - '0');
-		if	(str[i + 1] >= '0' && str[i + 1] <= '9')
-			nb = nb * 10;
+		if (temp[i] != temp2[i])
+			return (temp[i] - temp2[i]);
 		i++;
 	}
-	return (nb * signal);
+	return (0);
 }
 /*
 #include <stdio.h>
-#include <stdlib.h>
+#include <string.h>
 
-int	main(void)
+int	main (void)
 {
-	char	*num = "0";
-	printf("%d\n", atoi(num));
-	printf("%d\n", ft_atoi(num));
+	char	str[42] = "aaazaabccccccccc";
+	char	st2[42] = "aaaaaabccccccccc";
+
+	printf("%d\n", memcmp(str, st2, 15));
+	printf("%d\n", ft_memcmp(str, st2, 15));
 	return (0);
 }*/

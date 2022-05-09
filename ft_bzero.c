@@ -6,15 +6,15 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 12:10:04 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/06 07:59:58 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/09 11:16:28 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-typedef unsigned int	t_zise;
+#include <stdlib.h>
 
-void	ft_bzero(void *s, t_zise n)
+void	ft_bzero(void *s, size_t n)
 {
-	t_zise	i;
+	size_t	i;
 	char	*tempchar;
 
 	i = 0;
