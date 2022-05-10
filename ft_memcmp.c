@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 09:49:00 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/09 11:21:48 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/10 15:49:58 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,15 @@ int	ft_memcmp(const void *str1, const void *str2, size_t n)
 	}
 	return (0);
 }
+
 /*
 #include <stdio.h>
 #include <string.h>
 
 int	main (void)
 {
-	char	str[42] = "aaazaabccccccccc";
-	char	st2[42] = "aaaaaabccccccccc";
+	char	str[42] = "aaaaaabccccccccc";
+	char	st2[42] = "aaazaabccccccccc";
 
 	printf("%d\n", memcmp(str, st2, 15));
 	printf("%d\n", ft_memcmp(str, st2, 15));
