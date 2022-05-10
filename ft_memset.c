@@ -6,15 +6,15 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 11:08:42 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/06 07:57:51 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/10 12:00:47 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-typedef unsigned int	t_zise;
+#include <stdlib.h>
 
-void	*ft_memset(void	*str, int c, t_zise	n)
+void	*ft_memset(void	*str, int c, size_t	n)
 {
-	t_zise	i;
+	size_t	i;
 	char	*tchar;
 
 	tchar = (char *)str;

@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 12:10:04 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/09 11:16:28 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/10 13:46:08 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	ft_bzero(void *s, size_t n)
 	}
 }
 
-
+/*
 #include <stdio.h>
 #include <strings.h>
 
@@ -50,4 +50,4 @@ int	main(void)
 	while (i++ < 10)
 		printf("%i", st2[i]);
 	return (0);
-}
+}*/

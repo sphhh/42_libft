@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 10:28:38 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/09 14:31:54 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/10 11:47:15 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,14 @@ int	ft_isascii(int c)
 	return (0);
 }
 
-/*#include <ctype.h>
+/*
+#include <ctype.h>
 #include <stdio.h>
 int	main(void)
 {
 	int n;
 
-	n = 'd';
+	n = 127;
 	printf("output: %i\n", ft_isascii(n));
 	printf("output: %i\n", isascii(n));
-}afasfsfsfsafasfasfa*/
+}*/
