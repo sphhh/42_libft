@@ -6,33 +6,34 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 14:12:48 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/09 11:11:20 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/12 10:50:27 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-char *ft_strnstr(const char *s, const char *find, size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t i;
-	size_t a;
+	size_t	i;
+	size_t	a;
 
 	i = 0;
-	if (find[0] == '\0')
-		return ((char *)s);
-	while (s[i] && i < len)
+	if (little[0] == '\0')
+		return ((char *)big);
+	while (big[i] && i < len)
 	{
-			a = 0;
-			while (s[i + a] == find[a])
-			{
-				a++;
-				if (find[a] == '\0')
-						return ((char *)&s[i]);
-			}
-			i++;
+		a = 0;
+		while (big[i + a] == little[a])
+		{
+			a++;
+			if (little[a] == '\0')
+				return ((char *)&big[i]);
+		}
+		i++;
 	}
 	return (0);
 }
+
 /*
 #include <string.h>
 #include <stdio.h>

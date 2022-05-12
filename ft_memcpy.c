@@ -6,15 +6,15 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 10:12:22 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/05 15:04:41 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/12 08:06:13 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-typedef unsigned int	t_zise;
+#include <stdlib.h>
 
-void	*ft_memcpy(void *dest, const void *src, t_zise n)
+void	*ft_memcpy(void *dest, const void *src, size_t	n)
 {
-	t_zise	index;
+	size_t	index;
 	char	*temp;
 	char	*tempsrc;
 
@@ -29,17 +29,18 @@ void	*ft_memcpy(void *dest, const void *src, t_zise n)
 	return (dest);
 }
 
+/*
 #include <string.h>
 #include <stdio.h>
 int	main(void)
 {
-	char str[42] = "one twooo three four";
+	char str[42] = "12412341234";
 	//char dest[42];
 	
-	char str2[42] = "one twooo three four";
+	char str2[42] = "12412341234";
 	//char dest2[42];
 	memcpy(str, str + 4, 3 * sizeof(char));
 	printf("output: %s\n", str);
 	ft_memcpy(str2, str2 + 4, 3 * sizeof(char));
 	printf("output: %s\n", str2);
-}
+}*/

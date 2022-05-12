@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 11:40:23 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/10 14:35:29 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/12 13:03:01 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,27 +19,38 @@ int	ft_atoi(const char *str)
 	i = 0;
 	nb = 0;
 	signal = 1;
-	while (str[i] == '	')
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == ' ')
 			i++;
-	if (str[i++] == '-')
-		signal = -signal;
-	while (str[i] >= '0' && str[i] <= '9' && str[i])
+	while (str[i] == '-' || str[i] == '+')
 	{
-		nb =  nb + (str[i] - '0');
-		if	(str[i + 1] >= '0' && str[i + 1] <= '9')
-			nb = nb * 10;
+		if (str[i] == '-')
+			signal = -signal;
 		i++;
+	}
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		nb = nb + (str[i] - '0');
+		i++;
+		if (str[i] >= '0' && str[i] <= '9')
+			nb = nb * 10;
 	}
 	return (nb * signal);
 }
 
+/*
 #include <stdio.h>
 #include <stdlib.h>
 
 int	main(void)
 {
-	char	*num = "       353";
+	char	*num = "       234242343";
 	printf("%d\n", atoi(num));
 	printf("%d\n", ft_atoi(num));
+	printf("%d\n", atoi("-2147483648"));
+	printf("%d\n", ft_atoi("-2147483648"));
+	printf("%d\n", atoi("2147483647"));
+	printf("%d\n", ft_atoi("2147483647"));
+	printf("%d\n", atoi("+2147483647"));
+	printf("%d\n", ft_atoi("+2147483647"));
 	return (0);
-}
+}*/
