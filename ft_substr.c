@@ -1,43 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vipereir <vipereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/09 15:47:20 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/12 14:22:57 by vipereir         ###   ########.fr       */
+/*   Created: 2022/05/12 14:26:36 by vipereir          #+#    #+#             */
+/*   Updated: 2022/05/12 15:04:40 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-void	ft_bzero(void *s, size_t n)
+char	*ft_substr(char const	*s, unsigned int start, size_t len)
 {
+	char	*str;
 	size_t	i;
-	char	*tempchar;
 
 	i = 0;
-	tempchar = (char *)s;
-	while (i < n)
+	str = (char *)malloc(len * sizeof(*str));
+	if (str == NULL)
+		return (NULL);
+	while (s[start] && i < len)
 	{
-		tempchar[i] = 'A';
+		str[i] = s[start];
+		start++;
 		i++;
 	}
-}
-
-void	*ft_calloc(size_t	nmemb, size_t	size)
-{
-	void	*vp;
-
-	if (size == 0 || nmemb == 0)
-	{
-		nmemb = 1;
-		size = nmemb;
-	}
-	vp = malloc(nmemb * size);
-	ft_bzero(vp, nmemb * size);
-	return (vp);
+	return (str);
 }
 
 /*
@@ -45,19 +35,7 @@ void	*ft_calloc(size_t	nmemb, size_t	size)
 
 int	main(void)
 {
-	char	*array;
-	int	i;
-
-	i = 0;
-	array = (char *)ft_calloc(2, 2);
-	while (i < 22)
-	{
-		if (array[i] == 0)
-			printf("\\0");
-		else
-			printf("%c", array[i]);
-		i++;
-	}
-	printf("\n");
-	return(0);
+	char	string[42] = "some of the following funcions";
+	printf("%s\n", string);
+	printf("%s\n", ft_substr(string, 8, 10));
 }*/

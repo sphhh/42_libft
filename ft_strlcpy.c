@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 08:19:17 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/12 09:40:33 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/12 15:11:07 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	return (l);
 }
 
-
+/*
 #include <string.h>
 #include <stdio.h>
 
@@ -42,4 +42,4 @@ int	main(void)
 	aa = ft_strlcpy(dest, src, 5);
 	printf("%s\n", dest);
 	printf("%i\n", aa);
-}
+}*/
