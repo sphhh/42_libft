@@ -6,21 +6,21 @@
 /*   By: vipereir <vipereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 10:10:27 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/13 10:38:31 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/13 15:50:50 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-size_t	ft_strlen(char const *str)
-{
+size_t	ft_strlen(char const *str);
+/*{
 	size_t	i;
 
 	i = 0;
 	while (str[i])
 		i++;
 	return (i);
-}
+}*/
 
 char	*ft_strjoin(char const *s1, char const	*s2)
 {

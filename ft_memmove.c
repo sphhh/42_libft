@@ -6,15 +6,15 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 13:54:25 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/12 09:30:00 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/13 15:44:24 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <string.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t	n)
-{
+void	*ft_memcpy(void *dest, const void *src, size_t	n);
+/*{
 	size_t	index;
 	char	*temp;
 	char	*tempsrc;
@@ -28,7 +28,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t	n)
 		index++;
 	}
 	return (dest);
-}
+}*/
 
 void	*testtbf(void	*dest, const void	*src, size_t n)
 {

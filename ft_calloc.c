@@ -6,13 +6,14 @@
 /*   By: vipereir <vipereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 15:47:20 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/12 14:22:57 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/13 15:43:20 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-void	ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n);
+/*
 {
 	size_t	i;
 	char	*tempchar;
@@ -24,7 +25,7 @@ void	ft_bzero(void *s, size_t n)
 		tempchar[i] = 'A';
 		i++;
 	}
-}
+}*/
 
 void	*ft_calloc(size_t	nmemb, size_t	size)
 {

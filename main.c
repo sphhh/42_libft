@@ -6,14 +6,16 @@
 /*   By: vipereir <vipereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 10:37:31 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/13 10:37:33 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/13 14:01:31 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 int	main(void)
 {
 	printf("%i\n", ft_isdigit('5'));	
+	return (0);
 }

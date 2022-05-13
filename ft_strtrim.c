@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 10:47:55 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/13 12:16:00 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/13 15:58:24 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ char	*ft_findfirst(const char *big, const char *little)
 	return (0);
 }
 
-size_t	ft_strlen(const char *s)
-{
+size_t	ft_strlen(const char *s);
+/*{
 	int		i;
 
 	i = 0;
@@ -44,7 +44,7 @@ size_t	ft_strlen(const char *s)
 		i++;
 	}
 	return (i);
-}
+}*/
 
 char	*ft_strtrim(char const *s1, char const *set)
 {	
@@ -57,10 +57,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 }
 
 #include <stdio.h>
-
+/*
 int	main(void)
 {
 	char	str[42] = "ZXZXpao de queijo baoZXZX";
 	printf("%s\n", ft_strtrim(str, "ZXZX"));
 	return (0);
-}
+}*/

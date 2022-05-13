@@ -6,10 +6,12 @@
 /*   By: vipereir <vipereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 14:02:46 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/13 09:36:05 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/13 14:51:18 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef _H_LIBFT
+#define _H_LIBFT
 #include <stdlib.h>
 
 int	ft_isalpha(int c);
@@ -37,3 +39,4 @@ char	*ft_strdup(const char	*s);
 char	*ft_substr(char const	*s, unsigned int start, size_t len);
 void	*ft_calloc(size_t	nmemb, size_t	size);
 
+#endif

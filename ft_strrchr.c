@@ -6,19 +6,19 @@
 /*   By: vipereir <vipereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 10:12:34 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/06 10:12:40 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/13 15:57:49 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
-{
+int	ft_strlen(const char	*str);
+/*{
 	int	i;
 
 	i = 0;
 	while (str[i])
 		i++;
 	return (i);
-}
+}*/
 
 char	*ft_strrchr(const char *str, int c)
 {

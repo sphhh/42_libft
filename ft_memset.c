@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 11:08:42 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/10 12:00:47 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/13 15:46:40 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	*ft_memset(void	*str, int c, size_t	n)
 
 #include <stdio.h>
 #include <string.h>
-
+/*
 int	main(void)
 {
 	char str[42];
@@ -40,4 +40,4 @@ int	main(void)
 	printf("%s\n",str);	
 	memset(str, '#', 10);
 	printf("%s\n",str);
-}
+}*/
