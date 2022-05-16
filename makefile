@@ -1,10 +1,18 @@
+NAME = libft.a
 
+SRCS = main.c ft_*.c
 
-all:
-	cc -Wall -Wextra -Werror ft_*.c main.c libft.h
+OBJS = ${SRCS:.c=.o}
 
-run:
-	./a.out
+all: ${NAME}
+
+${NAME}: ${OBJS}
+	cc -Wall -Wextra -Werror -o ${NAME} ${SRCS}
 
 clean:
-	rm a.out
+	rm ${OBJS}
+
+fclean: clean
+	rm ${NAME}
+
+re: fclean all

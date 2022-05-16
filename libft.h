@@ -6,12 +6,12 @@
 /*   By: vipereir <vipereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 14:02:46 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/13 14:51:18 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/16 08:39:09 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef _H_LIBFT
-#define _H_LIBFT
+#ifndef LIBFT_H
+#define LIBFT_H
 #include <stdlib.h>
 
 int	ft_isalpha(int c);
