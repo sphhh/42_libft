@@ -6,26 +6,13 @@
 /*   By: vipereir <vipereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 15:47:20 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/13 15:43:20 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/17 12:05:25 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
 void	ft_bzero(void *s, size_t n);
-/*
-{
-	size_t	i;
-	char	*tempchar;
-
-	i = 0;
-	tempchar = (char *)s;
-	while (i < n)
-	{
-		tempchar[i] = 'A';
-		i++;
-	}
-}*/
 
 void	*ft_calloc(size_t	nmemb, size_t	size)
 {
@@ -37,6 +24,8 @@ void	*ft_calloc(size_t	nmemb, size_t	size)
 		size = nmemb;
 	}
 	vp = malloc(nmemb * size);
+	if (vp == NULL)
+		return (NULL);
 	ft_bzero(vp, nmemb * size);
 	return (vp);
 }

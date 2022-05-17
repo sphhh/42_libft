@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 11:08:42 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/13 15:46:40 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/17 11:56:15 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,10 @@ void	*ft_memset(void	*str, int c, size_t	n)
 	return (str);
 }
 
+/*
 #include <stdio.h>
 #include <string.h>
-/*
+
 int	main(void)
 {
 	char str[42];

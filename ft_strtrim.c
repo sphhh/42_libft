@@ -3,64 +3,72 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vipereir <vipereir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/13 10:47:55 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/13 15:58:24 by vipereir         ###   ########.fr       */
+/*   Created: 2022/05/17 13:51:10 by vipereir          #+#    #+#             */
+/*   Updated: 2022/05/17 15:54:44 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-char	*ft_findfirst(const char *big, const char *little)
+int	ft_is_set(char const	*s1, char const	*set)
 {
-	size_t	i;
-	size_t	a;
+	int	i;
+	int	k;
 
+	k = 0;
 	i = 0;
-	if (little[0] == '\0')
-		return ((char *)big);
-	while (big[i])
+	while (*set)
 	{
-		a = 0;
-		while (big[i + a] == little[a])
-		{
-			a++;
-			if (little[a] == '\0')
-				return ((char *)&big[i + a]);
-		}
-		i++;
-	}
-	return (0);
-}
+		if (set[i] != s[k])
+			i++;
+		else
 
-size_t	ft_strlen(const char *s);
-/*{
-	int		i;
-
-	i = 0;
-	while (s[i])
-	{
-		i++;
 	}
 	return (i);
-}*/
+}
 
-char	*ft_strtrim(char const *s1, char const *set)
-{	
+int	ft_strlenc(char const *c)
+{
+	int	i;
+
+	i = 0;
+	while (c[i])
+		i++;
+	return (i);
+}
+
+char	*ft_strtrim(char const	*s1, char const	*set)
+{
+	int		i;
 	char	*str;
+	int		end;
+	int		n;
 
-	str = (char *)malloc(ft_strlen(s1) * sizeof(*str));
-	str = ft_findfirst(s1, set);
+	n = 0;
+	end = ft_strlenc(s1) - ft_strlenc(set);
+	str = malloc(sizeof(*s1) * ft_strlenc(s1));
+	if (str == NULL)
+		return (NULL);
+	i = ft_is_set(s1, set);
+		while (&s1[i] != &s1[end])
+		{
+			str[n] = s1[i];
+			i++;
+			n++;
+		}
+		str[n] = '\0';
 	return (str);
-
 }
 
 #include <stdio.h>
-/*
+
 int	main(void)
 {
-	char	str[42] = "ZXZXpao de queijo baoZXZX";
-	printf("%s\n", ft_strtrim(str, "ZXZX"));
+	char	str[] = "f uuuuuuuuuuuuuuuidxgfh g f";
+	char	find[] = "asdf";
+
+	printf("output:%s\n", ft_strtrim(str, find));
 	return (0);
-}*/
+}

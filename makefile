@@ -4,7 +4,7 @@ NAME	= libft.a
 
 SRC		= ft_*.c
 
-OBJ		= ${SRC:.c=.o}
+OBJ		= $(SRC:.c=.o)
 
 CC		= cc
 
@@ -13,19 +13,19 @@ RM		= rm -f
 CFLAGS	= -Wall -Wextra -Werror
 
 .c.o:	
-		${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
+		$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
-${NAME}:	${OBJ}
-			${CC} ${CFLAGS} -c ${SRC}
-				ar rc ${NAME} ${OBJ}
+$(NAME):	$(OBJ)
+			$(CC) $(CFLAGS) -c $(SRC)
+				ar rc $(NAME) $(OBJ)
 
-all:		${NAME}
+all:		$(NAME)
 
 clean:
-			${RM} ${OBJ}
+			$(RM) $(OBJ)
 
 fclean:		clean
-			${RM} ${NAME}
+			$(RM) $(NAME)
 
 re:			fclean all
 

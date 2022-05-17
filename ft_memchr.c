@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 12:36:01 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/12 10:38:46 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/17 15:27:13 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memchr(const void *str, int c, size_t n)
 
 	temp = (char *)str;
 	i = 0;
-	while (temp[i] && i < n)
+	while (i < n)
 	{
 		if (temp[i] == c)
 			return ((void *)&temp[i]);
@@ -28,14 +28,14 @@ void	*ft_memchr(const void *str, int c, size_t n)
 	return (0);
 }
 
-/*
+
 #include <stdio.h>
 
 int	main(void)
 {
-	char	str[42] = "aaadasdsadas";
+	char	str[42] = "aaada\0dsadas";
 
-	printf("%s\n", ft_memchr(str, 'd', 5));
+	printf("%s\n", ft_memchr(str, '\0', 5));
 	return (0);
 }
-*/
+

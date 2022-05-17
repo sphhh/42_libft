@@ -6,21 +6,14 @@
 /*   By: vipereir <vipereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 15:00:25 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/13 15:52:55 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/17 11:54:22 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
 size_t	ft_strlen(const char	*str);
-/*{
-	size_t	i;
 
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}*/
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	i;
@@ -40,10 +33,11 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	return (a + ft_strlen((char *)src));
 }
 
+/*
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-/*
+
 int	main(void)
 {
 	char src[42] = "aaaaaaaaaaaaaaaaaaa";
@@ -58,4 +52,3 @@ int	main(void)
 	printf("%s\n", des2);
 	return(0);
 }*/
-
