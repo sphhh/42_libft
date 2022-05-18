@@ -6,32 +6,26 @@
 /*   By: vipereir <vipereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 10:12:34 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/13 15:57:49 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/18 10:42:57 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char	*str);
-/*{
-	int	i;
+#include "libft.h"
 
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}*/
-
-char	*ft_strrchr(const char *str, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	int	len;
+	char *safe;
 
-	len = ft_strlen((char *)str) - 1;
-	while (str[len])
+	safe = 0;
+	while (*s)
 	{
-		if (str[len] == c)
-			return ((char *)&str[len]);
-		len--;
+		if (*s == c)
+			safe = (char *)s;
+	s++;
 	}
-	return (0);
+		if (c == '\0')
+			safe = (char *)s;
+	return (safe);
 }
 
 /*
@@ -40,12 +34,12 @@ char	*ft_strrchr(const char *str, int c)
 
 int	main(void)
 {
-	char	string[42] = "aaaaaaaaabbbbcccccccbcccccccc";
-	char	string2[42] = "aaaaaaaaabbbbccccccbcccccccc";
+	char	string[42] =  "zaaaaaaaaabbbbccccccbcccccccc";
+	char	string2[42] = "zaaaaaaaaabbbbccccccbcccccccc";
 
 
-	printf("%s\n", strrchr(string, 'b')); 	
-	printf("%s\n", ft_strrchr(string2, 'b')); 
+	printf("%s\n", strrchr(string, 'b'));
+	printf("%s\n", ft_strrchr(string2, 'b'));
 	return(0);
 }
 */

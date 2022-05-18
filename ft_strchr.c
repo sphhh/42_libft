@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 08:58:12 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/06 09:37:09 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/18 08:17:26 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_strchr(const char *str, int c)
 			return ((char *)&str[i]);
 		i++;
 	}
+	if (str[i] == c)
+			return ((char *)&str[i]);
 	return (0);
 }
 
