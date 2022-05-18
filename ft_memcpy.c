@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 10:12:22 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/17 11:57:35 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/18 12:18:07 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memcpy(void	*dest, const void	*src, size_t	n)
 	temp = (char *)dest;
 	tempsrc = (char *)src;
 	index = 0;
+	if (dest == 0 && src == 0)
+		return (0);
 	while (index < n)
 	{
 		temp[index] = tempsrc[index];
@@ -34,13 +36,13 @@ void	*ft_memcpy(void	*dest, const void	*src, size_t	n)
 #include <stdio.h>
 int	main(void)
 {
-	char str[42] = "1234";
-	//char dest[42];
+	char str[42] = "aaaa\0aaa";
+	char dest[42];
 	
-	char str2[42] = "1234";
-	//char dest2[42];
-	memcpy(str, str, 3);
+	char str2[42] = "aaaa\0aaa";
+	char dest2[42];
+	memcpy(dest, str, 10);
 	printf("output: %s\n", str);
-	ft_memcpy(str2, str2, 3);
+	ft_memcpy(dest2, str2, 10);
 	printf("output: %s\n", str2);
 }*/

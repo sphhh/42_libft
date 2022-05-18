@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 10:12:34 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/18 10:42:57 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/18 11:33:22 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,23 +23,22 @@ char	*ft_strrchr(const char *s, int c)
 			safe = (char *)s;
 	s++;
 	}
-		if (c == '\0')
-			safe = (char *)s;
+	if (c == '\0')
+		safe = (char *)s;
 	return (safe);
 }
 
-/*
 #include <stdio.h>
 #include <string.h>
-
+/*
 int	main(void)
 {
 	char	string[42] =  "zaaaaaaaaabbbbccccccbcccccccc";
 	char	string2[42] = "zaaaaaaaaabbbbccccccbcccccccc";
 
 
-	printf("%s\n", strrchr(string, 'b'));
-	printf("%s\n", ft_strrchr(string2, 'b'));
+	printf("%s\n", strrchr(string, '\0'));
+	printf("%s\n", ft_strrchr(string2, '\0'));
 	return(0);
 }
 */
