@@ -1,33 +1,25 @@
 	/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   strtrim.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/29 18:36:45 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/19 12:20:40 by vipereir         ###   ########.fr       */
+/*   Created: 2022/05/19 08:45:40 by vipereir          #+#    #+#             */
+/*   Updated: 2022/05/19 12:19:50 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-size_t	ft_strlen(const char *s)
+char *ft_strtrim(char const *s1, char const *set)
 {
-	int		i;
-
-	i = 0;
-	while (s[i])
-	{
-		i++;
-	}
-	return (i);
+	
 }
-
-/*#include <stdio.h>
-
-int		main(void)
+/*
+int	main(void)
 {
-	printf("SIZE: %d\n", ft_strlen("aasdfsdf"));
-	return(0);
+	*str = "x ping pong x";
+	*set = "xz ";
+
+	ft_strtrim(str, set);
+	return (0);
 }*/

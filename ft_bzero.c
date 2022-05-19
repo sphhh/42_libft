@@ -6,11 +6,11 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 12:10:04 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/10 13:46:08 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/19 12:12:41 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

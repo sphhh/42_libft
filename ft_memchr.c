@@ -6,11 +6,11 @@
 /*   By: vipereir <vipereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 12:36:01 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/17 15:27:13 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/19 12:14:14 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *str, int c, size_t n)
 {
@@ -28,7 +28,7 @@ void	*ft_memchr(const void *str, int c, size_t n)
 	return (0);
 }
 
-
+/*
 #include <stdio.h>
 
 int	main(void)
@@ -38,4 +38,4 @@ int	main(void)
 	printf("%s\n", ft_memchr(str, '\0', 5));
 	return (0);
 }
-
+*/

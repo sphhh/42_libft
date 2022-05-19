@@ -6,11 +6,11 @@
 /*   By: vipereir <vipereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 09:49:00 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/18 11:16:34 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/19 12:15:10 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 int	ft_memcmp(const void	*str1, const void	*str2, size_t n)
 {

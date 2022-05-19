@@ -6,31 +6,14 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 13:54:25 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/13 15:44:24 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/19 12:18:47 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <string.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t	n);
-/*{
-	size_t	index;
-	char	*temp;
-	char	*tempsrc;
+#include "libft.h"
 
-	temp = (char *)dest;
-	tempsrc = (char *)src;
-	index = 0;
-	while (index < n)
-	{
-		temp[index] = tempsrc[index];
-		index++;
-	}
-	return (dest);
-}*/
-
-void	*testtbf(void	*dest, const void	*src, size_t n)
+static void	*testtbf(void	*dest, const void	*src, size_t n)
 {
 	uint8_t	*from;
 	uint8_t	*to;
@@ -42,12 +25,12 @@ void	*testtbf(void	*dest, const void	*src, size_t n)
 	while (i >= 0)
 	{
 		to[i] = from[i];
-		i++;
+		i--;
 	}
 	return (dest);
 }
 
-void	*testfbt(void *dest, const void *src, size_t	n)
+static void	*testfbt(void *dest, const void *src, size_t	n)
 {	
 	uint8_t	*from;
 	uint8_t	*to;

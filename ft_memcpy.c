@@ -6,11 +6,11 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 10:12:22 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/18 12:18:07 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/19 12:16:56 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 void	*ft_memcpy(void	*dest, const void	*src, size_t	n)
 {

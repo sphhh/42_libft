@@ -3,21 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vipereir <vipereir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/13 10:37:31 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/16 11:48:01 by vipereir         ###   ########.fr       */
+/*   Created: 2022/05/19 13:58:14 by vipereir          #+#    #+#             */
+/*   Updated: 2022/05/19 14:17:18 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
-#include <stdlib.h>
 
 int	main(void)
 {
-	char	str[42] = "asdfasdf";
-	printf("%i\n", ft_isdigit('5'));
-	printf("%zu\n", ft_strlen(str));
+	char	c;
+
+	c = 'c';
+	printf("-------------ft_isalpha------------\n");
+	printf("%d\n", ft_isalpha(c));
+	printf("-------------ft_isdigit------------\n");
+	printf("%d\n", ft_isdigit(c));
+	printf("-------------ft_isalnum------------\n");
+	printf("%d\n", ft_isalnum(c));
+	printf("-------------ft_isascii------------\n");
+	printf("%d\n", ft_isascii(c));
+	printf("-------------ft_isprint------------\n");
+	printf("%d\n", ft_isprint(c));
+	printf("-------------ft_toupper------------\n");
+	printf("%c\n", ft_toupper(c));
+	printf("-------------ft_tolower------------\n");
+	printf("%c\n", ft_tolower(c));
 	return (0);
 }

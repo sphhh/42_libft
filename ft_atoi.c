@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vipereir <vipereir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/09 11:40:23 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/12 13:03:01 by vipereir         ###   ########.fr       */
+/*   Created: 2022/05/19 12:08:29 by vipereir          #+#    #+#             */
+/*   Updated: 2022/05/19 12:12:17 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {
