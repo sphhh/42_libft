@@ -6,20 +6,19 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 08:45:40 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/19 12:19:50 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/19 15:52:00 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strtrim(char const *s1, char const *set)
-{
-	
-}
-/*
+#include <stdio.h>
+
 int	main(void)
 {
-	*str = "x ping pong x";
-	*set = "xz ";
+	char	*str = "x ping pong x";
+	char	*set = "xz ";
+	char	*asf;
 
-	ft_strtrim(str, set);
+	asf = ft_strtrim(str, set);
+	printf("%s\n", asf);
 	return (0);
-}*/
+}
