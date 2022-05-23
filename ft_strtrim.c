@@ -1,41 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/06 08:58:12 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/20 13:55:12 by vipereir         ###   ########.fr       */
+/*   Created: 2022/05/23 08:31:20 by vipereir          #+#    #+#             */
+/*   Updated: 2022/05/23 11:11:16 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *s, int c)
-{
-	int	i;
+#include "libft.h"
 
-	i = 0;
-	while (s[i])
+static int	ft_is_set(char const s1, char const *set)
+{
+	while (*set)
 	{
-		if (s[i] == c)
-			return ((char *)&s[i]);
-		i++;
+		if (s1 == *set)
+			return (1);
+		set++;
 	}
-	if (s[i] == c)
-			return ((char *)&s[i]);
 	return (0);
 }
 
-/*
-#include <stdio.h>
-#include <string.h>
-
-int	main(void)
+char	*ft_strtrim(char const	*s1, char const *set)
 {
-	const char	string[42] = "aaaaaaaaabccccccc";
+	int	start;
+	int	max_size;
 
-	printf("%s\n", string);
-	printf("%s\n", ft_strchr(string, 'd'));
-
+	start = 0;
+	max_size = ft_strlen(s1);
+	while (ft_is_set(s1[start], set))
+		start++;
+	while (ft_is_set(s1[max_size - 1], set))
+		max_size--;
+	return ((char *)ft_substr(s1, start, max_size - start));
 }
-*/

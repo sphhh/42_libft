@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 13:54:25 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/19 12:18:47 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/20 13:53:45 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,27 +47,27 @@ static void	*testfbt(void *dest, const void *src, size_t	n)
 	return (dest);
 }
 
-void	*ft_memmove(void	*dest, const void	*src, size_t	n)
+void	*ft_memmove(void	*dst, const void	*src, size_t	n)
 {
 	uint8_t	*from;
 	uint8_t	*to;
 
 	from = (uint8_t *) src;
-	to = (uint8_t *) dest;
+	to = (uint8_t *) dst;
 	if (from == to || n == 0)
-		return (dest);
+		return (dst);
 	if (to > from && to - from < (int)n)
 	{
-		testtbf (dest, src, n);
-		return (dest);
+		testtbf (dst, src, n);
+		return (dst);
 	}
 	if (from > to && from - to < (int)n)
 	{
-		testfbt(dest, src, n);
-		return (dest);
+		testfbt(dst, src, n);
+		return (dst);
 	}
-	ft_memcpy(dest, src, n);
-	return (dest);
+	ft_memcpy(dst, src, n);
+	return (dst);
 }
 
 /*

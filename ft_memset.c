@@ -6,25 +6,25 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 11:08:42 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/17 11:56:15 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/20 13:49:27 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-void	*ft_memset(void	*str, int c, size_t	n)
+void	*ft_memset(void	*b, int c, size_t	len)
 {
 	size_t	i;
 	char	*tchar;
 
-	tchar = (char *)str;
+	tchar = (char *)b;
 	i = 0;
-	while (i < n)
+	while (i < len)
 	{
 		tchar[i] = c;
 		i++;
 	}
-	return (str);
+	return (b);
 }
 
 /*

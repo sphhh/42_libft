@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 15:47:40 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/17 12:27:17 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/23 08:59:56 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 int	ft_strlen(const char *s);
 
-char	*ft_strdup(const char	*s)
+char	*ft_strdup(const char	*s1)
 {
 	char	*string;
 	size_t	i;
 
 	i = 0;
-	string = (char *)malloc(sizeof(*string) * (ft_strlen(s) + 1));
+	string = (char *)malloc(sizeof(*string) * (ft_strlen(s1) + 1));
 	if (string == NULL)
 		return (NULL);
-	while (s[i])
+	while (s1[i])
 	{
-		string[i] = s[i];
+		string[i] = s1[i];
 		i++;
 	}
 	string[i] = '\0';

@@ -6,21 +6,21 @@
 /*   By: vipereir <vipereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 09:49:00 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/19 12:15:10 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/20 13:59:17 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void	*str1, const void	*str2, size_t n)
+int	ft_memcmp(const void	*s1, const void	*s2, size_t n)
 {
 	size_t			i;
 	char			*temp;
 	char			*temp2;
 	unsigned char	r;
 
-	temp = (char *)str1;
-	temp2 = (char *)str2;
+	temp = (char *)s1;
+	temp2 = (char *)s2;
 	i = 0;
 	while (i < n)
 	{

@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 15:47:20 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/19 12:13:00 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/23 08:53:38 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,19 @@
 
 void	ft_bzero(void *s, size_t n);
 
-void	*ft_calloc(size_t	nmemb, size_t	size)
+void	*ft_calloc(size_t	count, size_t	size)
 {
 	void	*vp;
 
-	if (size == 0 || nmemb == 0)
+	if (size == 0 || count == 0)
 	{
-		nmemb = 1;
-		size = nmemb;
+		count = 1;
+		size = count;
 	}
-	vp = malloc(nmemb * size);
+	vp = malloc(count * size);
 	if (vp == NULL)
 		return (NULL);
-	ft_bzero(vp, nmemb * size);
+	ft_bzero(vp, count * size);
 	return (vp);
 }
 
