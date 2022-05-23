@@ -6,12 +6,13 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 13:58:14 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/23 11:18:51 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/23 12:45:04 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
+#include <limits.h>
 
 int	main(void)
 {
@@ -35,7 +36,8 @@ int	main(void)
 	printf("-------------ft_strtrim------------\n");
 	printf("%s\n", ft_strtrim("        abacatekkkk  jjjjj", "k xmjl"));
 	printf("---------------ft_itoa-------------\n");
-	printf("%s\n", ft_itoa(1234));
+	printf("%s\n", ft_itoa(INT_MAX));
+	printf("%s\n", ft_itoa(INT_MIN));
 
 	return (0);
 }

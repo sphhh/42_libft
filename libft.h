@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/20 12:22:11 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/23 11:21:25 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/23 15:12:50 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,7 @@ void	*ft_calloc(size_t	count, size_t	size);
 char	*ft_strjoin(char const *s1, char const	*s2);
 char	*ft_strtrim(char const	*s1, char const	*set);
 char	*ft_itoa(int	n);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void	ft_striteri(char	*s, void (*f)(unsigned int, char*));
 
 #endif
