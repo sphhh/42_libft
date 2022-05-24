@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/20 12:22:11 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/24 10:57:30 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/24 11:07:44 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,4 +45,6 @@ char	*ft_itoa(int	n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char	*s, void (*f)(unsigned int, char*));
 void	ft_putchar_fd(char	c, int	fd);
+void	ft_putstr_fd(char	*s, int	fd);
+
 #endif
