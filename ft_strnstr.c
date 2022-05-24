@@ -6,11 +6,10 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 14:12:48 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/20 12:09:25 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/24 09:01:35 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
@@ -47,7 +46,7 @@ int	main(void)
 
 
 	char	s1[42] = "rio de janeiro";
-	char	s2[42] = "ne";
+	char	s2[42] = "\0";
 //	size_t max = strlen(s2);
 //	char *i1 = strnstr(s1, s2, max);
 //	char *i2 = ft_strnstr(s1, s2, max);

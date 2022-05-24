@@ -1,42 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/23 15:13:18 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/24 10:46:40 by vipereir         ###   ########.fr       */
+/*   Created: 2022/05/24 10:47:46 by vipereir          #+#    #+#             */
+/*   Updated: 2022/05/24 10:56:13 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_striteri(char	*s, void	(*f)(unsigned int, char*))
-{
-	unsigned int	i;
+#include "libft.h"
 
-	i = 0;
-	while(s[i])
-	{
-		f(i, &s[i]);
-		i++;
-	}
+void	ft_putchar_fd(char	c, int	fd)
+{
+	write (fd, &c , 1);
 }
-
-/*
-void	ft_change(unsigned int	i, char* c)
-{
-	i = 1;
-	c[0] = 'A' * i;
-}
-
-#include <stdio.h>
-
-// nao to entendendo isso
-
-int	main(void)
-{
-	char	*voo = "1234";
-	ft_striteri(voo, ft_change);
-	printf("%s\n", (char *)voo);
-	return (0);
-}*/
