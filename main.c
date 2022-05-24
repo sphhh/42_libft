@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 13:58:14 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/24 13:36:26 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/24 16:08:19 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,11 @@ int	main(void)
 	ft_putchar_fd('\n', 1);
 	ft_putnbr_fd(-INT_MIN, 1);
 	ft_putchar_fd('\n', 1);
+	char	**string;
+
+	string = ft_split("aaaaaaaaaaaaaaaa8bbbbbbbbbbbbbbb8asfdfggshshshshh8", '8'):
+		printf("%s\n", string[0]);
+		printf("%s\n", string[1]);
+		printf("%s\n", string[2]);
 	return (0);
 }
