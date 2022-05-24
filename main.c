@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 13:58:14 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/24 11:08:53 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/24 11:28:22 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,6 @@ int	main(void)
 	ft_putchar_fd('$', 1);
 	ft_putchar_fd('\n', 1);
 	ft_putstr_fd("oh my zsh!\n", 1);
-
+	ft_putendl_fd("quebra de linha", 1);
 	return (0);
 }
