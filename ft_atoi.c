@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 12:08:29 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/19 12:12:17 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/25 13:00:55 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_atoi(const char *str)
 	while (str[i] == '-' || str[i] == '+')
 	{
 		if (str[i] == '-')
-			signal = -signal;
+			signal = signal * -1;
 		i++;
 	}
 	while (str[i] >= '0' && str[i] <= '9')
@@ -39,7 +39,7 @@ int	ft_atoi(const char *str)
 	return (nb * signal);
 }
 
-/*
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -55,4 +55,4 @@ int	main(void)
 	printf("%d\n", atoi("+2147483647"));
 	printf("%d\n", ft_atoi("+2147483647"));
 	return (0);
-}*/
+}
