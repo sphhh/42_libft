@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 15:47:20 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/23 08:53:38 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/26 14:50:03 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	*ft_calloc(size_t	count, size_t	size)
 	return (vp);
 }
 
-/*
+
 #include <stdio.h>
 
 int	main(void)
@@ -50,4 +50,4 @@ int	main(void)
 	}
 	printf("\n");
 	return(0);
-}*/
+}
