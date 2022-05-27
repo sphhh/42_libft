@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/20 12:22:11 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/24 15:51:09 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/27 10:20:48 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,12 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
+
+typedef struct	s_list
+{
+void			*content;
+struct s_list	*next;
+}				t_list;
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);

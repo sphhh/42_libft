@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 13:54:25 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/20 13:53:45 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/27 08:52:55 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,8 @@ void	*ft_memmove(void	*dst, const void	*src, size_t	n)
 	uint8_t	*from;
 	uint8_t	*to;
 
-	from = (uint8_t *) src;
-	to = (uint8_t *) dst;
+	from = (uint8_t *)src;
+	to = (uint8_t *)dst;
 	if (from == to || n == 0)
 		return (dst);
 	if (to > from && to - from < (int)n)

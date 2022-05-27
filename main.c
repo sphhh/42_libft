@@ -6,13 +6,15 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 13:58:14 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/26 09:04:22 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/27 12:10:18 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 #include <limits.h>
+#include <string.h>
+#include <strings.h>
 
 int	main(void)
 {
@@ -37,21 +39,53 @@ int	main(void)
 	printf("%zu\n", ft_strlen(""));
 	printf("%zu\n", ft_strlen("\0"));
 	printf("%zu\n", ft_strlen("hajdfaskdjfhalsdfasdfjlkhasdlkjaslfasfaksldfjasçdlkf"));
-	printf("%zu\n", ft_strlen("cinco"));
-	printf("%zu\n", ft_strlen("\200"));
-	printf("%zu\n", ft_strlen("\t"));
-	printf("%zu\n", ft_strlen("334345343453535353453434534"));
-	printf("%zu\n", ft_strlen("fgsdgsdgsdgsdfg\n\t"));
+	printf("--------------ft_bzero-------------\n");
+	char st2[] = "qwer";
+	char str[9] = "qwer";
+	int		i;
+
+	i = 0;
+	printf("%s\n", str);
+	bzero(str, 7);
+	printf("%s\n", st2);
+	ft_bzero(st2, 7);
+	while (i <= 10)
+	{
+		if (str[i] == st2[i])
+			i++;
+		else
+			printf("fvck");
+			break ;
+	}
+	printf("OK");
+	printf("\n");
+
+	printf("-------------ft_memcpy-------------\n");
+	
+
+	printf("-------------ft_memmove------------\n");
+	printf("-------------ft_strchr-------------\n");
+	printf("-------------ft_strncmp------------\n");
+	printf("-------------ft_memchr-------------\n");
+	printf("-------------ft_memcmp-------------\n");
+	printf("-------------ft_strrchr------------\n");
+	printf("-------------ft_strnstr------------\n");
+	printf("--------------ft_atoi--------------\n");
+	printf("-------------ft_strlcpy------------\n");
+	printf("-------------ft_strlcat------------\n");
+	printf("-------------ft_strdup-------------\n");
+	printf("-------------ft_substr-------------\n");
+	printf("-------------ft_calloc-------------\n");
+	printf("-------------ft_strjoin------------\n");
 	printf("-------------ft_strtrim------------\n");
-	char str0[42];
-	strcpy(str0, "asdfasdfasdfasdfasdf");
-	printf("%s\n",str0);
-	ft_memset(str0, '$', 10);
-	printf("%s\n",str0);	
-	memset(str0, '#', 10);
-	printf("%s\n",str0);
-
-
+	printf("--------------ft_itoa--------------\n");
+	printf("-------------ft_strmapi------------\n");
+	printf("-------------ft_striteri-----------\n");
+	printf("------------ft_putchar_fd----------\n");
+	printf("------------ft_putstr_fd-----------\n");
+	printf("------------ft_putendl_fd----------\n");
+	printf("------------ft_putnbr_fd-----------\n");
+	printf("--------------ft_split-------------\n");
 
 
 
@@ -60,7 +94,7 @@ int	main(void)
 
 
 	printf("-------------ft_strtrim------------\n");
-	printf("%s\n", ft_strtrim("        abacatekkkk  jjjjj", "k xmjl"));
+	printf("%s\n", ft_strtrim("   ", "    "));
 	printf("---------------ft_itoa-------------\n");
 	printf("%s\n", ft_itoa(INT_MAX));
 	printf("%s\n", ft_itoa(INT_MIN));
