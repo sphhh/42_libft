@@ -6,11 +6,12 @@
 /*   By: vipereir <vipereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 14:26:36 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/25 08:42:30 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/27 14:43:00 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
 
 char	*ft_substr(char const	*s, unsigned int start, size_t len)
 {
@@ -18,10 +19,14 @@ char	*ft_substr(char const	*s, unsigned int start, size_t len)
 	size_t	i;
 
 	i = 0;
-	str = (char *)malloc(len * sizeof(*str) + 1);
-	if (str == NULL)
+	if (!s || NULL == (str = (char *)malloc(len * sizeof(*str) + 1)))
 		return (NULL);
-	while (s[start] && i < len)
+	if (start >= ft_strlen(s))
+	{
+		str[i] = '\0';
+		return (str);
+	}
+	while (i < len)
 	{
 		str[i] = s[start];
 		start++;
@@ -36,8 +41,8 @@ char	*ft_substr(char const	*s, unsigned int start, size_t len)
 
 int	main(void)
 {
-	char	string[42] = "some of the following funcions";
+	char	string[42] = "some";
 	printf("%s\n", string);
-	printf("%s\n", ft_substr(string, 8, 10));
+	printf("%s\n", ft_substr(string, 15, 10));
 	return (0);
 }*/
