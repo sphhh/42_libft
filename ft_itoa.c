@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 11:13:30 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/23 14:25:34 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/30 12:12:39 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char	*ft_itoa(int n)
 	nb = (char	*)malloc((sizeof(*nb) * ft_intlen(n)) + 1);
 	if (!nb || nb == NULL)
 		return (NULL);
-	if (-2147483648)
+	if ( n == -2147483648)
 	{
 		nb = "-2147483648";
 		return(nb);
@@ -60,12 +60,13 @@ char	*ft_itoa(int n)
 		nb[0] = '-';
 	return (nb);
 }
+
 /*
 #include <stdio.h>
 
 int	main(void)
 {
-	printf("%i\n", ft_itoa(-10000000));
+	printf("%s\n", ft_itoa(-10000000));
 	return (0);
 }
 */
