@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 11:13:30 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/30 12:12:39 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/30 15:55:29 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,22 +35,20 @@ char	*ft_itoa(int n)
 	size_t	i;
 	size_t	s;
 
-	s = 0;
-	i = ft_intlen(n);
-	nb = (char	*)malloc((sizeof(*nb) * ft_intlen(n)) + 1);
-	if (!nb || nb == NULL)
-		return (NULL);
-	if ( n == -2147483648)
-	{
-		nb = "-2147483648";
-		return(nb);
-	}
+	if (n == -2147483648)
 	if (n < 0)
 	{
-		n = -n;
 		s = 1;
+		n = -n;
 	}
-	nb[ft_intlen(n)] = '\0';
+	s = 0;
+	i = 0;
+	i = ft_intlen(n);
+	nb = (char	*)malloc((sizeof(*nb) * i ) + 1);
+	if (!nb || nb == NULL)
+		return (NULL);
+	nb[i] = '\0';
+		return(nb);
 	while (i-- > 0)
 	{
 		nb[i] = (n % 10) + 48;
@@ -62,11 +60,12 @@ char	*ft_itoa(int n)
 }
 
 /*
-#include <stdio.h>
 
+#include <stdio.h>
 int	main(void)
 {
-	printf("%s\n", ft_itoa(-10000000));
+	printf("%s\n", ft_itoa(-2147483648));
+	printf("%d\n", ft_intlen(-2147483648));
 	return (0);
 }
 */
