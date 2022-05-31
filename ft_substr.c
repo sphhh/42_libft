@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 14:26:36 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/27 14:43:00 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/31 08:42:25 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,10 @@ char	*ft_substr(char const	*s, unsigned int start, size_t len)
 	size_t	i;
 
 	i = 0;
-	if (!s || NULL == (str = (char *)malloc(len * sizeof(*str) + 1)))
+	if (!s)
+		return (NULL);
+	str = (char *)malloc(len * sizeof(*str) + 1);
+	if (str == NULL)
 		return (NULL);
 	if (start >= ft_strlen(s))
 	{

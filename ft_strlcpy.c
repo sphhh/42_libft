@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 08:19:17 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/20 14:03:10 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/31 08:33:49 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,10 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	return (l);
 }
 
-
+/*
 #include <string.h>
 #include <stdio.h>
-/*
+
 int	main(void)
 {
 	char src[42] = "123456789";

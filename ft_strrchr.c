@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 10:12:34 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/18 11:33:22 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/31 08:37:49 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char *safe;
+	char	*safe;
 
 	safe = 0;
 	while (*s)
@@ -28,15 +28,14 @@ char	*ft_strrchr(const char *s, int c)
 	return (safe);
 }
 
+/*
 #include <stdio.h>
 #include <string.h>
-/*
+
 int	main(void)
 {
 	char	string[42] =  "zaaaaaaaaabbbbccccccbcccccccc";
 	char	string2[42] = "zaaaaaaaaabbbbccccccbcccccccc";
-
-
 	printf("%s\n", strrchr(string, '\0'));
 	printf("%s\n", ft_strrchr(string2, '\0'));
 	return(0);

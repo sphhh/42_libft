@@ -6,13 +6,13 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 11:24:13 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/24 11:29:49 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/31 08:48:07 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char	*s, int	fd)
+void	ft_putendl_fd(char *s, int fd)
 {
 	while (*s)
 		write (fd, s++, 1);

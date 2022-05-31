@@ -6,16 +6,16 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 15:13:18 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/24 10:46:40 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/31 08:44:48 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_striteri(char	*s, void	(*f)(unsigned int, char*))
+void	ft_striteri(char	*s, void (*f)(unsigned int, char*))
 {
 	unsigned int	i;
 
 	i = 0;
-	while(s[i])
+	while (s[i])
 	{
 		f(i, &s[i]);
 		i++;

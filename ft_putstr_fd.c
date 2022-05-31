@@ -6,13 +6,13 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 11:04:57 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/24 11:10:31 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/05/31 08:47:24 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char	*s, int	fd)
+void	ft_putstr_fd(char *s, int fd)
 {
 	while (*s)
 		write (fd, s++, 1);
