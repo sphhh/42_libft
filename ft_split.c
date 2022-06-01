@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 11:51:10 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/30 12:07:07 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/06/01 08:58:10 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,25 +112,25 @@ int main(void)
 
 	i = 0;
 	printf("test nword\n");
-	printf("%i\n", ft_nwords("------aaaaaaaaa----bbbbbbbbb----cccccccccc--d------e----", '-'));
-	printf("%i\n", ft_nwords("aaaaaaaaa----bbbbbbbbb----cccccccccc--d------e----", '-'));
-	printf("%i\n", ft_nwords("------aaaaaaaaa----bbbbbbbbb----cccccccccc--d------e", '-'));
-	fvck = ft_split("------aaaaaaaaa----bbbbbbbbb----cccccccccc--d------e", '-');
+	printf("%i\n", ft_nwords("------aaaa----bbbb----ccccc--d----e----", '-'));
+	printf("%i\n", ft_nwords("aaaaaa----bbbbbbbbb----ccc--d------e----", '-'));
+	printf("%i\n", ft_nwords("------aaaaaaa----bbbbbb----ccccc--d--e", '-'));
+	fvck = ft_split("------aaaaaaaaa----bbbbbbbb----cccc--d------e", '-');
 	while (i <= 5)
 		printf("%s\n", fvck[i++]);
 
 	i = 0;
-	fvck = ft_split("------aaaaaaaaa----bbbbbbbbb----cccccccccc--d------e", '-');
+	fvck = ft_split("------aaaaaaaaa----bbbbbb----ccccccc--d------e", '-');
 	while (i <= 5)
 		printf("%s\n", fvck[i++]);
 
 	i = 0;
-	fvck = ft_split("aaaaaaaaa----bbbbbbbbb----cccccccccc--d------e", '-');
+	fvck = ft_split("aaaaaaaaa----bbbbbbbbb----cccccccccc-----e", '-');
 	while (i <= 5)
 		printf("%s\n", fvck[i++]);
 
 	i = 0;
-	fvck = ft_split("------aaaaaaaaa----bbbbbbbbb----cccccccccc--d------ei--------", '-');
+	fvck = ft_split("------aaaaa----bbbbb----cccccc--d---ei-----", '-');
 	while (i <= 5)
 		printf("%s\n", fvck[i++]);
 

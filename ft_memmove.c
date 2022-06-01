@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 13:54:25 by vipereir          #+#    #+#             */
-/*   Updated: 2022/06/01 08:31:56 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/06/01 08:39:30 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_memmove(void	*dst, const void	*src, size_t	n)
 {
 	size_t	i;
 
+	if (!dst && !src)
+		return (0);
 	if ((size_t)dst - (size_t)src > n)
 		ft_memcpy(dst, src, n);
 	else

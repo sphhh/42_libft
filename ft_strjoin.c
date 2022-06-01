@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 10:10:27 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/19 12:05:11 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/06/01 08:51:22 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ char	*ft_strjoin(char const *s1, char const	*s2)
 
 	i = 0;
 	j = 0;
-	if (!s1)
+	if (!s1 || !s2)
 		return (NULL);
-	str = (char *)malloc(ft_strlen(s1) + ft_strlen(s2));
+	str = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (str == NULL)
 		return (NULL);
 	while (s1[i])
