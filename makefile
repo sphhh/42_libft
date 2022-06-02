@@ -33,9 +33,9 @@ SRC			= ft_isalnum.c\
 			  ft_split.c\
 			  ft_strjoin.c\
 			  ft_strmapi.c\
-			  ft_strtrim.c\
+			  ft_strtrim.c
 
-SRC_B		= ft_lstnew_bonus.c\
+SRC_B		= ft_lstnew_bonus.c ft_lstadd_front_bonus.c
 
 OBJ_B			= $(SRC_B:.c=.o)
 
