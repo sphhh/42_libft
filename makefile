@@ -35,7 +35,9 @@ SRC			= ft_isalnum.c\
 			  ft_strmapi.c\
 			  ft_strtrim.c\
 
-BSRC		= ft_lstnew.c
+SRC_B		= ft_lstnew_bonus.c\
+
+OBJ_B			= $(SRC_B:.c=.o)
 
 OBJ			= $(SRC:.c=.o)
 
@@ -52,12 +54,15 @@ $(NAME):	$(OBJ)
 			$(CC) $(CFLAGS) -c $(SRC)
 				ar rc $(NAME) $(OBJ)
 
-bonus:		$()
+bonus:		$(NAME)
+			$(CC) $(CFLAGS) -c $(SRC_B)
+			ar rc $(NAME) $(OBJ_B)
 
 all:		$(NAME)
 
 clean:
 			$(RM) $(OBJ)
+			$(RM) $(OBJ_B)
 
 fclean:		clean
 			$(RM) $(NAME)

@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/20 12:22:11 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/27 10:20:48 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/06/02 15:45:45 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,5 +55,6 @@ void	ft_putstr_fd(char	*s, int	fd);
 void	ft_putendl_fd(char	*s, int	fd);
 void	ft_putnbr_fd(int	n, int	fd);
 char	**ft_split(char const	*s, char	c);
+t_list	*ft_lstnew(void *content);
 
 #endif
