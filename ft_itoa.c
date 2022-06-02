@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 11:13:30 by vipereir          #+#    #+#             */
-/*   Updated: 2022/06/02 11:37:51 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/06/02 14:28:31 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,41 +32,40 @@ static int	ft_intlen(int c)
 char	*ft_itoa(int n)
 {
 	char			*nb;
-	int				s;
-	unsigned int	nn;
 	int				t;
+	unsigned int	nn;
 
 	t = ft_intlen(n);
-	s = 1;
+	nn = n;
 	nb = malloc(sizeof(char) * t + 1);
+	nb[0] = '0';
 	if (nb == NULL)
 		return (NULL);
 	if (n < 0)
-	{
-		s = -s;
+		nb[0] = '-';
+	if (n < 0)
 		nn = -n;
-	}
-	else
-		nn = n;
 	nb[t--] = '\0';
-	if (nn == 0)
-		nb[t] = '0';
 	while (nn > 0)
 	{
 		nb[t--] = nn % 10 + '0';
 		nn = nn / 10;
 	}
-	if (s == -1)
-		nb[t] = '-';
 	return (nb);
 }
 
 /*
+#include <limits.h>
 #include <stdio.h>
+
 int	main(void)
 {
 	printf("%d\n", ft_intlen(+1000));
 	printf("%s\n", ft_itoa(0));
+	printf("%s\n", ft_itoa(1));
+	printf("%s\n", ft_itoa(2));
+	printf("%s\n", ft_itoa(INT_MAX));
+	printf("%s\n", ft_itoa(INT_MIN));
+	printf("%s\n", ft_itoa('\0'));
 	return (0);
-}
-*/
+}*/

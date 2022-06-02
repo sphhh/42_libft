@@ -34,7 +34,8 @@ SRC			= ft_isalnum.c\
 			  ft_strjoin.c\
 			  ft_strmapi.c\
 			  ft_strtrim.c\
-			  ft_lstnew_bonus.c
+
+BSRC		= ft_lstnew.c
 
 OBJ			= $(SRC:.c=.o)
 
@@ -50,6 +51,8 @@ CFLAGS		= -Wall -Wextra -Werror
 $(NAME):	$(OBJ)
 			$(CC) $(CFLAGS) -c $(SRC)
 				ar rc $(NAME) $(OBJ)
+
+bonus:		$()
 
 all:		$(NAME)
 

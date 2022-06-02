@@ -1,42 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/23 15:13:18 by vipereir          #+#    #+#             */
-/*   Updated: 2022/06/01 09:41:02 by vipereir         ###   ########.fr       */
+/*   Created: 2022/06/02 14:39:07 by vipereir          #+#    #+#             */
+/*   Updated: 2022/06/02 14:44:41 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_striteri(char	*s, void (*f)(unsigned int, char*))
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	unsigned int	i;
-
-	i = 0;
-	while (s[i])
-	{
-		(*f)(i, &s[i]);
-		i++;
-	}
+	new->next = &lst;
 }
 
-/*
-void	ft_change(unsigned int	i, char* c)
-{
-	c[i] = 'A';
-}
-
-#include <stdio.h>
-
-// nao to entendendo isso
-
-int	main(void)
-{
-	char	*voo = "1234";
-
-	ft_striteri(voo, ft_change);
-	printf("%s\n", voo);
-	return (0);
-}*/

@@ -6,11 +6,11 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 13:58:14 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/27 12:10:18 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/06/01 10:18:08 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "./libft/libft.h"
 #include <stdio.h>
 #include <limits.h>
 #include <string.h>
