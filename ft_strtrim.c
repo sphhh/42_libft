@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 08:31:20 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/30 14:24:59 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/06/06 14:36:33 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,14 +42,13 @@ char	*ft_strtrim(char const	*s1, char const *set)
 }
 
 /*
-
 #include <stdio.h>
 
 int	main(void)
 {
-	char *s1 = "aaaaaaaa";
+	char *s1 = "aaaabbbbbasfasdfcacacacacacacac";
 //	char *s2 = "";
-	char *ret = ft_strtrim(s1, "a");
+	char *ret = ft_strtrim(s1, "acb");
 	printf("%s\n", ret);
 	return (0);
 }*/

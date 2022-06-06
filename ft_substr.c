@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 14:26:36 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/31 08:42:25 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/06/06 10:46:35 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,8 @@ char	*ft_substr(char const	*s, unsigned int start, size_t len)
 
 int	main(void)
 {
-	char	string[42] = "some";
+	char	*string = "ABCDEFGHIJ";
 	printf("%s\n", string);
-	printf("%s\n", ft_substr(string, 15, 10));
+	printf("%s\n", ft_substr(string, 3, 30));
 	return (0);
 }*/
