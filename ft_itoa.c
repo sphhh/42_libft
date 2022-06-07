@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 11:13:30 by vipereir          #+#    #+#             */
-/*   Updated: 2022/06/02 14:28:31 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/06/07 09:50:15 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,9 @@ char	*ft_itoa(int n)
 	t = ft_intlen(n);
 	nn = n;
 	nb = malloc(sizeof(char) * t + 1);
-	nb[0] = '0';
 	if (nb == NULL)
 		return (NULL);
+	nb[0] = '0';
 	if (n < 0)
 		nb[0] = '-';
 	if (n < 0)

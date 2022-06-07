@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 08:58:12 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/31 08:34:14 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/06/06 16:55:25 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ int	main(void)
 {
 	const char	string[42] = "aaaaaaaaabccccccc";
 
+	ft_strchr(s, 't' + 256)
 	printf("%s\n", string);
 	printf("%s\n", ft_strchr(string, 'd'));
 

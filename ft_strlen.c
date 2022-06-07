@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 18:36:45 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/31 08:35:13 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/06/07 11:28:10 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,10 @@ size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-/*#include <stdio.h>
+/*
+#include <stdio.h>
 int		main(void)
 {
-	printf("SIZE: %d\n", ft_strlen("aasdfsdf"));
+	printf("SIZE: %zu\n", ft_strlen("aasdfsdf"));
 	return(0);
 }*/
