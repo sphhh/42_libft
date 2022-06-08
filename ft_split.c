@@ -6,13 +6,12 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 11:51:10 by vipereir          #+#    #+#             */
-/*   Updated: 2022/06/08 10:52:05 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/06/08 15:23:42 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 static int	ft_nwords(char const *s, char c)
 {
@@ -73,6 +72,18 @@ static int	ft_len(char const *s, char c)
 	return (i);
 }
 
+static char	*ft_help(const char *s, int start, int *len, char c)
+{
+	int		slen;
+	char	*str;
+
+	slen = *len;
+	slen = ft_len(&s[start], c);
+	len = &slen;
+	str = ft_substr(s, start, slen);
+	return (str);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**array;
@@ -85,24 +96,19 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	if (!s)
 		return (0);
-	array = malloc(sizeof(char *) * (ft_nwords(s, c) + 1));
+	array = ft_calloc(1, sizeof(char *) * (ft_nwords(s, c) + 1));
 	if (s[0] == 0 || array == NULL)
 	{
 		array[i] = NULL;
 		return (array);
 	}
 	if (s[start] != c)
-	{
-		len = ft_len(&s[start], c);
-		array[i++] = ft_substr(s, start, len);
-	}
+		array[i++] = ft_help(s, start, &len, c);
 	while (i <= ft_nwords(s, c) - 1)
 	{
 		start = start + ft_start(&s[start], c);
-		len = ft_len(&s[start], c);
-		array[i++] = ft_substr(s, start, len);
+		array[i++] = ft_help(s, start, &len, c);
 	}
-	array[i] = NULL;
 	return (array);
 }
 
@@ -134,11 +140,5 @@ int main(void)
 	fvck = ft_split("      split       this for   me  !       ", ' ');
 	while (i <= 6)
 		printf("%s\n", fvck[i++]);
-	i = 0;
-
-	fvck = ft_split("" , ' ');
-		printf("%s\n", fvck[i++]);
-		printf("%s\n", fvck[i]);
-
 	return (0);
 }*/
