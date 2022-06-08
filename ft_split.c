@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 11:51:10 by vipereir          #+#    #+#             */
-/*   Updated: 2022/06/08 10:24:27 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/06/08 10:52:05 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-static int	ft_nwords(char const	*s, char	c)
+static int	ft_nwords(char const *s, char c)
 {
 	int		i;
 
@@ -33,7 +33,7 @@ static int	ft_nwords(char const	*s, char	c)
 	return (i);
 }
 
-static int	ft_start(char const	*s, char	c)
+static int	ft_start(char const *s, char c)
 {
 	int	i;
 
@@ -47,36 +47,33 @@ static int	ft_start(char const	*s, char	c)
 		}
 		return (i);
 	}
-	else if (*s != c)
-		while (*s != c && *s)
-		{
-			s++;
-			i++;
-		}
-		while (*s == c && *s)
-		{
-			s++;
-			i++;
-		}
-	return (i);
-}
-
-
-static int	ft_len(char const	*s, char	c)
-{
-	int	i;
-
-	i = 0;
 	while (*s != c && *s)
-{
+	{
+		s++;
+		i++;
+	}
+	while (*s == c && *s)
+	{
 		s++;
 		i++;
 	}
 	return (i);
 }
 
+static int	ft_len(char const *s, char c)
+{
+	int	i;
 
-char	**ft_split(char const	*s, char	c)
+	i = 0;
+	while (*s != c && *s)
+	{
+		s++;
+		i++;
+	}
+	return (i);
+}
+
+char	**ft_split(char const *s, char c)
 {
 	char	**array;
 	int		i;
@@ -86,9 +83,10 @@ char	**ft_split(char const	*s, char	c)
 	start = 0;
 	len = 0;
 	i = 0;
-	if(!s || 0 == (array = malloc(sizeof(char *) * (ft_nwords(s, c) + 1))))
+	if (!s)
 		return (0);
-	if (s[0] == 0)
+	array = malloc(sizeof(char *) * (ft_nwords(s, c) + 1));
+	if (s[0] == 0 || array == NULL)
 	{
 		array[i] = NULL;
 		return (array);
@@ -119,7 +117,6 @@ int main(void)
 	printf("%i\n", ft_nwords("", '-'));
 	printf("%i\n", ft_nwords("aaaaaa----bbbbbbbbb----ccc--d------e----", '-'));
 	printf("%i\n", ft_nwords("------aaaaaaa----bbbbbb----ccccc--d--e", '-'));
-
 
 	fvck = ft_split("------aaaaaaaaa----bbbbbbbb----cccc--d------e", '-');
 	while (i <= 5)
