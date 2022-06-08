@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 09:50:51 by vipereir          #+#    #+#             */
-/*   Updated: 2022/06/07 15:47:38 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/06/08 09:31:15 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	p = ft_lstlast(*lst);
 	if (p == NULL)
 		*lst = new;
-		new->next = NULL;
 	else
 		p->next = new;
 }
