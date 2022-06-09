@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 12:56:16 by vipereir          #+#    #+#             */
-/*   Updated: 2022/06/08 15:12:41 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/06/09 11:50:26 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*str;
 	unsigned int	i;
 
+	if (!s)
+		return (0);
 	i = 0;
 	str = ft_strdup(s);
 	if (str == NULL)

@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 11:04:57 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/31 08:47:24 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/06/09 11:51:27 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
+	if (!s)
+		return ;
 	while (*s)
 		write (fd, s++, 1);
 }

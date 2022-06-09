@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 11:24:13 by vipereir          #+#    #+#             */
-/*   Updated: 2022/05/31 08:48:07 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/06/09 11:51:49 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
+	if (!s)
+		return ;
 	while (*s)
 		write (fd, s++, 1);
 	write (fd, "\n", 1);
