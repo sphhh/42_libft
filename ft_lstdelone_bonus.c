@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/03 15:20:00 by vipereir          #+#    #+#             */
-/*   Updated: 2022/06/03 15:44:53 by vipereir         ###   ########.fr       */
+/*   Created: 2022/06/09 12:06:45 by vipereir          #+#    #+#             */
+/*   Updated: 2022/06/09 12:06:47 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	t_list	*p;
-	t_list	*s;
-
-	p = lst;
-	s = p;
-	while (p != NULL)
-	{
-		s = p;
-		p = p->next;
-	}
-	return (s);
+	(*del)(lst->content);
+	free(lst);
 }
