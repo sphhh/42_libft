@@ -6,11 +6,12 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 08:31:20 by vipereir          #+#    #+#             */
-/*   Updated: 2022/06/07 12:32:20 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/06/09 10:21:14 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static int	ft_is_set(char const s1, char const *set)
 {
@@ -27,7 +28,6 @@ char	*ft_strtrim(char const	*s1, char const *set)
 {
 	int		start;
 	int		max_size;
-	char	*s;
 
 	start = 0;
 	if (!s1)
@@ -36,11 +36,10 @@ char	*ft_strtrim(char const	*s1, char const *set)
 	while (ft_is_set(s1[start], set))
 		start++;
 	if (s1[start] == '\0')
-		return ("\0");
-	while (ft_is_set(s1[max_size - 1], set))
+		return (ft_substr(s1, start, 0));
+	while (max_size >= 1 && ft_is_set(s1[max_size - 1], set))
 		max_size--;
-	s = ft_substr(s1, start, max_size - start);
-	return (s);
+	return (ft_substr(s1, start, max_size - start));
 }
 
 /*

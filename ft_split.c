@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 11:51:10 by vipereir          #+#    #+#             */
-/*   Updated: 2022/06/08 15:23:42 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/06/09 10:01:59 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,11 +97,11 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (0);
 	array = ft_calloc(1, sizeof(char *) * (ft_nwords(s, c) + 1));
-	if (s[0] == 0 || array == NULL)
-	{
-		array[i] = NULL;
+	if (array == NULL)
+		return (0);
+	array[0] = 0;
+	if (s[0] == 0)
 		return (array);
-	}
 	if (s[start] != c)
 		array[i++] = ft_help(s, start, &len, c);
 	while (i <= ft_nwords(s, c) - 1)

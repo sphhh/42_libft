@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 12:52:15 by vipereir          #+#    #+#             */
-/*   Updated: 2022/06/06 14:06:47 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/06/09 11:05:57 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	while (*lst != NULL)
 	{
 		p = (*lst)->next;
-		ft_lstdelone(*lst,(*del));
+		ft_lstdelone(*lst, (*del));
 		*lst = p;
 	}
 	*lst = NULL;

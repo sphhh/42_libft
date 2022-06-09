@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 10:12:34 by vipereir          #+#    #+#             */
-/*   Updated: 2022/06/02 15:09:35 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/06/09 10:27:18 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strrchr(const char *s, int c)
 	safe = 0;
 	while (*s)
 	{
-		if (*s == c)
+		if (*s == (unsigned char)c)
 			safe = (char *)s;
 	s++;
 	}
