@@ -65,7 +65,7 @@ $(NAME):	$(OBJ)
 
 bonus:		$(OBJ_B)
 			$(CC) $(CFLAGS) -c $(SRC_B)
-			ar rc $(NAME) $(OBJ) $(OBJ_B)
+				ar rc $(NAME) $(OBJ) $(OBJ_B)
 
 all:		$(NAME)
 
